@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <form class="form needs-validation" id="form" novalidate>
+                    <div class="form-group">
+                        <label for="fecha">Fecha</label>
+                        <input class="form-control" required id="fecha" type="date">
+                    </div>
+                    <div class="valid-feedback">correcto</div>
+                    <div class="invalid-feedback">incorrecto</div>
+
+                    <div class="form-group">
+                            <label for="tipo">Tipo</label>
+                            <select class="form-control" id="tipo" required>
+                                <option value="Transporte">Transporte</option>
+                                <option value="Hospedaje">Hospedaje</option>
+                                <option value="Alimentos">Alimentos</option>
+                                <option value="Otros">Otros</option>
+                            </select>
+                        </div>
+                        <div class="valid-feedback">correcto</div>
+                        <div class="invalid-feedback">incorrecto</div>
+
+                    <div class="form-group">
+                        <label for="concepto">Concepto</label>
+                        <input class="form-control" required type="text" id="concepto">
+                    </div>
+                    <div class="valid-feedback">correcto</div>
+                    <div class="invalid-feedback">incorrecto</div>
+
+                    <div class="form-group">
+                        <label for="monto">Monto</label>
+                        <input class="form-control" id="monto" required type="number">
+                    </div>
+                    <div class="valid-feedback">correcto</div>
+                    <div class="invalid-feedback">incorrecto</div>
+                    
+                    <button id="btnAdd" class="btn btn-warning col-12" type="button">Aceptar</button>
+                </form>
+            </div>
+
+            <div class="col-sm-12 col-md-8">
+                <table id="tablaGasto" class="table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Tipo</th>
+                            <th>Concepto</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table" id="tablaInfo">
+                    <thead>
+                        <tr>
+                            <th>Indicador</th>
+                            <th>Valor</th>
+                        </tr>
+                        <tr>
+                            <th>Gastos en transporte</th>
+                            <th id="transporte"></th>
+                        </tr>
+                        <tr>
+                            <th>Gastos en hospedaje</th>
+                            <th id="hospedaje"></th>
+                        </tr>
+                        <tr>
+                            <th>Alimentos</th>
+                            <th id="alimentos"></th>
+                        </tr>
+                        <tr>
+                            <th>Otros gastos</th>
+                            <th id="otros"></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="main.js" type="module"></script>
+</html>

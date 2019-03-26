@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>CONSULTA</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <form class="form needs-validation" id="form" novalidate>
+                    <div class="form-group">
+                        <label for="consDate">fecha de consulta</label>
+                        <input class="form-control" required id="consDate" type="date">
+                    </div>
+                    <div class="valid-feedback">Fecha Valida</div>
+                    <div class="invalid-feedback">Fecha invalida</div>
+
+                    <div class="form-group">
+                        <label for="time">Hora</label>
+                        <input class="form-control" required type="time" id="time">
+                    </div>
+                    <div class="valid-feedback">Hora valida</div>
+                    <div class="invalid-feedback">Hora invalida</div>
+                    
+                    <div class="form-group">
+                        <label for="patientName">Nombre</label>
+                        <input class="form-control" id="patientName" required type="text">
+                    </div>
+                    <div class="valid-feedback">Nombre Valido</div>
+                    <div class="invalid-feedback">Nombre Invalido</div>
+                    
+                    <button id="btnAdd" class="btn btn-info col-12" type="button">Listo!</button>
+                </form>
+            </div>
+
+            <div class="col-sm-12 col-md-8">
+                <table id="tableConsultation" class="table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Nombre del paciente</th>
+                            <th>Dias faltantes</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table" id="tableInfo">
+                    <thead>
+                        <tr>
+                            <th>Indicador</th>
+                            <th>Valor</th>
+                        </tr>
+                        <tr>
+                            <th>Citas programadas para el lunes</th>
+                            <th id="monday"></th>
+                        </tr>
+                        <tr>
+                            <th>Citas programadas para el Martes</th>
+                            <th id="monday"></th>
+                        </tr>
+                        <tr>
+                            <th>Citas programadas para el Miercoles</th>
+                            <th id="monday"></th>
+                        </tr>
+                        <tr>
+                            <th>Citas programadas para el Jueves</th>
+                            <th id="monday"></th>
+                        </tr>
+                        <tr>
+                            <th>Citas programadas para el Viernes</th>
+                            <th id="monday"></th>
+                        </tr>
+                        <tr>
+                            <th>Citas programadas para el Sabado</th>
+                            <th id="monday"></th>
+                        </tr>
+                        <tr>
+                            <th>Citas programadas para el Domingo</th>
+                            <th id="monday"></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="main.js" type="module"></script>
+</html>
