@@ -1,9 +1,10 @@
-export default class Employee {
+export default class Empleados {
     constructor(employee) {
+      this._id = employee.id;
       this._name = employee.name.toUpperCase();
-      this._email = employee.email;
       this._birthday = employee.birthday;
       this._contratacion = employee._contratacion;
+      this._sueldo = employee.sueldo;
       this._months = [
         "Ene",
         "Feb",
@@ -19,15 +20,17 @@ export default class Employee {
         "Dic"
       ];
     }
+
+    get id() {
+      return this._id;
+    }
+  
   
     get name() {
       return this._name;
     }
   
-    get email() {
-      return this._email;
-    }
-  
+    
     get birthday() {
       return this._birthday;
     }
